@@ -11,5 +11,5 @@ pages = ["am369--{}.html".format(i + 1) for i in range(145)]
 for page in pages:
     print("Downloading " + page + " ...")
     response = requests.get(url + page)
-    with open("../../data/" + page, "w+") as f:
+    with open("../../data/raw/" + page, "w+") as f:
         f.write(response.text)
